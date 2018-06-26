@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>APP后台管理系统</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"> -->
+  <!--<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="dist/static/font-awesome/awesome/font-awesome.min.css">
+  <link href="https://cdn.bootcss.com/datatables/1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/select2/4.0.6-rc.1/css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="dist/static/viewer/viewer.min.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header" id="header-component">
+      <header-component v-if="isShow"></header-component>
+    </header>
+    <aside class="main-sidebar" id="menu-component">
+      <menu-component v-if="isShow"></menu-component>
+    </aside>
+    <div class="content-wrapper" id="app">
+      <router-view></router-view>
+    </div>
+     <footer class="main-footer" id="footer-component">
+       <footer-component v-if="isShow"></footer-component>
+     </footer>
+     <div id="loading-component">
+       <loading-component v-if="isShow"></loading-component>
+     </div>
+  </div>
+  <script src="dist/static/jQuery/jQuery-2.1.4.min.js"></script>
+  <script src="dist/static/bootstrap/bootstrap.min.js"></script>
+  <script src="dist/static/app.min.js"></script>
+  <script src="dist/static/jsoneditor.min.js"></script>
+  <script src="dist/static/jquery.toastmessage.js"></script>
+  <script src="dist/static/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+  <script src="dist/static/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+  <script src="dist/static/select2/select2.full.min.js"></script>
+  <script src="dist/static/upload/mOxie.js"></script>
+  <script src="dist/static/upload/plupload/plupload.full.min.js"></script>
+  <script src="dist/static/upload/ui.js"></script>
+  <script src="dist/static/upload/qiniu/qiniu.min.js"></script>
+  <script src="dist/static/crypto/core-min.js"></script>
+  <script src="dist/static/crypto/aes.js"></script>
+  <script src="dist/static/viewer/viewer.min.js"></script>
+  <script src="dist/common.js"></script>
+  <script src="dist/build.js"></script>
+  <script>
+      console.log("2018-6-23 10:30");
+      console.log("dev");
+  </script>
+</body>
+</html>

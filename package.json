@@ -1,0 +1,67 @@
+{
+  "name": "juyiting_amdin_web",
+  "version": "1.0.0",
+  "description": "juyiting app admin web",
+  "main": "index.html",
+  "scripts": {
+    "local": "cross-env NODE_ENV=local node node_modules/webpack/bin/webpack.js --progress --profile --colors",
+    "production": "cross-env NODE_ENV=production node node_modules/webpack/bin/webpack.js --progress --profile --colors",
+    "dev": "cross-env NODE_ENV=dev node node_modules/webpack/bin/webpack.js --progress --profile --colors",
+    "server": "node server.js",
+    "clean": "rimraf ../server/admin/dist/* && rimraf ../server/admin/index.html",
+    "deploy": "npm run clean && cp -r ./dist/* ../server/admin/dist &&  cp -r ./index.html ../server/admin/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "cnode",
+    "WebApp",
+    "Vue",
+    "Webpack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "^4.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.2",
+    "babel-runtime": "^5.8.0",
+    "css-loader": "^0.23.0",
+    "cssnext-loader": "^1.0.1",
+    "del": "^2.0.2",
+    "eventsource-polyfill": "^0.9.6",
+    "exports-loader": "^0.6.2",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "fastclick": "^1.0.6",
+    "file-loader": "^0.8.4",
+    "function-bind": "^1.0.2",
+    "html-loader": "^0.3.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^3.10.1",
+    "markdown": "^0.5.0",
+    "object-assign": "^4.0.1",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.2.0",
+    "vue-resource": "^0.1.17",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0",
+    "webpack-zepto": "0.0.1"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "shelljs": "^0.7.5",
+    "vue": "^1.0.4",
+    "vue-router": "^0.7.5"
+  }
+}
